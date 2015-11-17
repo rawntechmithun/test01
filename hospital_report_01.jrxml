@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="hospital_report_01"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="98"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="2"
+						y="3"
+						width="59"
+						height="20"
+						key="staticText-1"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Bed No:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="1"
+						y="23"
+						width="69"
+						height="20"
+						key="staticText-2"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[ Patient ID]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="1"
+						y="45"
+						width="64"
+						height="25"
+						key="staticText-3"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[DOB]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="1"
+						y="72"
+						width="64"
+						height="25"
+						key="staticText-4"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Gender]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="271"
+						y="22"
+						width="64"
+						height="25"
+						key="staticText-5"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Patient ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="272"
+						y="47"
+						width="64"
+						height="25"
+						key="staticText-6"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Age]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="271"
+						y="72"
+						width="64"
+						height="25"
+						key="staticText-7"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Ref.By]]></text>
+				</staticText>
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="161"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="2"
+						y="8"
+						width="252"
+						height="26"
+						key="staticText-8"/>
+					<box></box>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+				<text><![CDATA[Department of Pathology Laboratory]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="3"
+						y="4"
+						width="532"
+						height="1"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="2"
+						y="79"
+						width="532"
+						height="1"
+						key="line-2"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						x="2"
+						y="80"
+						width="163"
+						height="26"
+						key="staticText-9"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Specimen Information]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="219"
+						y="80"
+						width="101"
+						height="26"
+						key="staticText-10"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="Helvetica" size="14" isBold="false"/>
+					</textElement>
+				<text><![CDATA[Collected]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="219"
+						y="106"
+						width="101"
+						height="26"
+						key="staticText-11"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="Helvetica" size="14" isBold="false"/>
+					</textElement>
+				<text><![CDATA[Received]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="219"
+						y="133"
+						width="140"
+						height="26"
+						key="staticText-12"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font pdfFontName="Helvetica" size="14" isBold="false"/>
+					</textElement>
+				<text><![CDATA[Report Generated]]></text>
+				</staticText>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="100"  isSplitAllowed="true" >
+				<line direction="TopDown">
+					<reportElement
+						x="1"
+						y="0"
+						width="532"
+						height="1"
+						key="line-3"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="2"
+						y="27"
+						width="532"
+						height="1"
+						key="line-4"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="2"
+						y="1"
+						width="78"
+						height="26"
+						backcolor="#CCCCCC"
+						key="staticText-13"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Test]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="80"
+						y="1"
+						width="99"
+						height="26"
+						backcolor="#CCCCCC"
+						key="staticText-14"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Result]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="179"
+						y="1"
+						width="101"
+						height="26"
+						backcolor="#CCCCCC"
+						key="staticText-15"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Unit]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="275"
+						y="1"
+						width="155"
+						height="26"
+						backcolor="#CCCCCC"
+						key="staticText-16"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Reference Value]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="428"
+						y="1"
+						width="104"
+						height="26"
+						backcolor="#CCCCCC"
+						key="staticText-17"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Methodology]]></text>
+				</staticText>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="60"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="1"
+						y="39"
+						width="75"
+						height="20"
+						backcolor="#FFFFFF"
+						key="staticText-18"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Created By]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="131"
+						y="40"
+						width="75"
+						height="20"
+						key="staticText-19"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Checked By]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="278"
+						y="40"
+						width="75"
+						height="20"
+						key="staticText-20"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Approved By]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="422"
+						y="40"
+						width="75"
+						height="20"
+						key="staticText-21"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Consulted By]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="1"
+						y="26"
+						width="75"
+						height="14"
+						key="staticText-22"/>
+					<box></box>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[-----------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="131"
+						y="26"
+						width="78"
+						height="14"
+						key="staticText-23"/>
+					<box></box>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[------------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="277"
+						y="26"
+						width="78"
+						height="14"
+						key="staticText-24"/>
+					<box></box>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[------------------]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="422"
+						y="26"
+						width="78"
+						height="14"
+						key="staticText-25"/>
+					<box></box>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[------------------]]></text>
+				</staticText>
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="54"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>
